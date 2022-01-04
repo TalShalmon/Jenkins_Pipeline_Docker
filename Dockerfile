@@ -1,3 +1,3 @@
-FROM levintovich/myfirstwebserver:latest
+FROM python:3.7-alpine
 
-COPY ./index.html /var/www/html/
+COPY [ "python", "-c", "print('Hello World!')"]
