@@ -1,3 +1,5 @@
 FROM python:3.7-alpine
 
-COPY [ "python", "-c", "print('Hello World!')"]
+COPY hello_world.py /
+
+CMD ["python", "hello_world.py"]
