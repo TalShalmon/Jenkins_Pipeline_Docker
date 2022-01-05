@@ -9,13 +9,13 @@ pipeline {
     stage("build") {
       steps {
         sh """
-          docker build -t ${IMAGE_NAME} .      
+          docker build -t ${IMAGE_NAME} . 
+          echo "Image Name: ${IMAGE_NAME}" 
         """
       }
     }
     stage("run") {
       steps {
-        echo "${IMAGE_NAME}" 
         sh """
           docker run --rm hello_world
         """
